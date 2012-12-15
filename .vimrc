@@ -48,10 +48,13 @@ set nobk
 highlight OverLength ctermbg=red ctermfg=white
 match OverLength /\%>80v.\+/
 
+"Set 256 colors mode. Well, only in vim.
+set t_Co=256
+
 if has('gui_running')
 "Envy Code R is an awesome font made by Damien Guard
 "Can be found in his blog damieng.com
-    set guifont=Envy\ Code\ R\ 11
+    set guifont=Terminus\ 11
 "Adele is just a slightly modified Monokai theme
     colorscheme adele
 endif
