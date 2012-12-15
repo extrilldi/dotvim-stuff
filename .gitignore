@@ -1,0 +1,4 @@
+# Things that should not exist here
+*.zip
+.directory
+.netrwhist
