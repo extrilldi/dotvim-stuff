@@ -55,6 +55,11 @@ inoremap {<cr> {<cr>}<c-o>O<tab>
 inoremap [<cr> [<cr>]<c-o>O<tab>
 inoremap (<cr> (<cr>)<c-o>O<tab>
 
+"More autocomplete stuff, mostly inline brackets.
+inoremap ( ()<Left>
+inoremap [ []<Left>
+inoremap { {}<Left>
+inoremap < <><Left>
 
 set diffexpr=MyDiff()
 function MyDiff()
