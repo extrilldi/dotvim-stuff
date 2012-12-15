@@ -1,4 +1,9 @@
 " ~/.vimrc (configuration file for vim only)
+
+"Pathogen by tpope on github.
+"Pretty cool.
+call pathogen#infect('~/src/vim/bundle')
+
 " filetypes
 filetype on
 filetype plugin on
@@ -7,6 +12,7 @@ filetype indent on
 syntax on
 
 set nocompatible
+set encoding=utf-8
 "set ch=2
 "set cul
 set autoindent
@@ -31,6 +37,7 @@ set number
 set wildmenu
 set wildmode=list:longest,full
 "set stl=%f\ %m\ %r\ Line:\ %l/%L[%p%%]\ Col:\ %c\ Buf:\ #%n\ [%b][0x%B]
+"This will be omitted by Powerline, but no point on erasing it
 set statusline=%t%h%m%r%=[%b\ 0x%02B]\ \ \ %l,%c%V\ %P
 "set statusline=%2*%n\|%<%*%-.40F%2*\|\ %2*%M\ %3*%=%1*\%1*%2.6l%2*x%1*%1.9(%c%V%)%2*[%1*%P%2*]%1*%2B
 "set guioptions=ac
@@ -48,6 +55,10 @@ if has('gui_running')
 "Adele is just a slightly modified Monokai theme
     colorscheme adele
 endif
+
+"Powerline Fancy Characters
+"Because more bling is needed. Always.
+let g:Powerline_symbols = 'fancy'
 
 "Auto complete for {}, () and []
 "Might change it, because it triggers at new line (enter).
