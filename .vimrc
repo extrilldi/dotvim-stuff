@@ -37,12 +37,20 @@ set statusline=%t%h%m%r%=[%b\ 0x%02B]\ \ \ %l,%c%V\ %P
 set guioptions-=T
 set nobk
 
+"Highlight over 80 character lines.
+highlight OverLength ctermbg=red ctermfg=white
+match OverLength /\%81v.\+/
 
 if has('gui_running')
+"Envy Code R is an awesome font made by Damien Guard
+"Can be found in his blog damieng.com
     set guifont=Envy\ Code\ R\ 11
-"    colorscheme adele
+"Adele is just a slightly modified Monokai theme
+    colorscheme adele
 endif
 
+"Auto complete for {}, () and []
+"Might change it, because it triggers at new line (enter).
 inoremap {<cr> {<cr>}<c-o>O<tab>
 inoremap [<cr> [<cr>]<c-o>O<tab>
 inoremap (<cr> (<cr>)<c-o>O<tab>
