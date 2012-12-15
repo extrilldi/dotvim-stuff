@@ -39,7 +39,7 @@ set nobk
 
 "Highlight over 80 character lines.
 highlight OverLength ctermbg=red ctermfg=white
-match OverLength /\%81v.\+/
+match OverLength /\%>80v.\+/
 
 if has('gui_running')
 "Envy Code R is an awesome font made by Damien Guard
