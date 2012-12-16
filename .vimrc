@@ -4,12 +4,33 @@
 "Pretty cool.
 call pathogen#infect('~/src/vim/bundle')
 
+"Pathogen sauced plugins and cofigs.
+"
+"NERDTree
+"Auto load NERDTree
+autocmd vimenter * NERDTree
+
+"Auto load NERDTree when no file specified.
+autocmd vimenter * if !argc() | NERDTree | endif
+
+"Powerline
+"Fancy Characters. Because more bling is needed. Always.
+let g:Powerline_symbols = 'fancy'
+
+
+"End of Pathogen sauced plugins config
+
+
 " filetypes
 filetype on
 filetype plugin on
 filetype indent on
 
 syntax on
+
+"Might turn these on when I get more confortable with __NO_MOUSE__
+"set hidden
+"set mouse=a
 
 set nocompatible
 set encoding=utf-8
@@ -59,9 +80,6 @@ if has('gui_running')
     colorscheme adele
 endif
 
-"Powerline Fancy Characters
-"Because more bling is needed. Always.
-let g:Powerline_symbols = 'fancy'
 
 "Auto complete for {}, () and []
 "Might change it, because it triggers at new line (enter).
