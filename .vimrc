@@ -11,6 +11,8 @@ call pathogen#infect('~/src/vim/bundle')
 autocmd vimenter * NERDTree
 "Auto load NERDTree when no file specified.
 autocmd vimenter * if !argc() | NERDTree | endif
+"NERDTree toggle, because sometimes I end up closing things
+nnoremap <F4> :NERDTreeToggle<CR>
 
 "Powerline
 "Fancy Characters. Because more bling is needed. Always.
