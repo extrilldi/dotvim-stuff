@@ -28,6 +28,9 @@ let g:Powerline_symbols = 'fancy'
 "I use default Yakuake config, and become accustomed to press <F12>, so the
 "toggle key is <F2> now.
 
+"bufkill.vim
+"No config either.
+
 "End of Pathogen sauced plugins config
 
 
@@ -38,9 +41,8 @@ filetype indent on
 
 syntax on
 
-"Might turn these on when I get more confortable with __NO_MOUSE__
 set hidden
-"set mouse=a
+set mouse=a
 
 set nocompatible
 set encoding=utf-8
@@ -73,7 +75,11 @@ set statusline=%t%h%m%r%=[%b\ 0x%02B]\ \ \ %l,%c%V\ %P
 "set statusline=%2*%n\|%<%*%-.40F%2*\|\ %2*%M\ %3*%=%1*\%1*%2.6l%2*x%1*%1.9(%c%V%)%2*[%1*%P%2*]%1*%2B
 "set guioptions=ac
 set guioptions-=T
+
+"Sorry, but no 70s thing about manual backups.
+"And, I'm quite confident about my system, to hold up the files without swap
 set nobk
+set noswapfile
 
 "Highlight over 80 character lines.
 highlight OverLength ctermbg=red ctermfg=white
