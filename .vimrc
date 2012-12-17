@@ -9,7 +9,6 @@ call pathogen#infect('~/src/vim/bundle')
 "NERDTree
 "Auto load NERDTree
 autocmd vimenter * NERDTree
-
 "Auto load NERDTree when no file specified.
 autocmd vimenter * if !argc() | NERDTree | endif
 
@@ -17,6 +16,17 @@ autocmd vimenter * if !argc() | NERDTree | endif
 "Fancy Characters. Because more bling is needed. Always.
 let g:Powerline_symbols = 'fancy'
 
+"MiniBufExpl
+"Well, this thing has no configs for now.
+"It just sauces from a forked repo, instead of official one
+"Because a little patch.
+
+"Vim-togglemouse
+"This little script toggles the mouse functionality, so it is handy why trying
+"to paste to the terminal, or just using the mouse inside vim
+"It is sauced from a forked repo, because changes to the config
+"I use default Yakuake config, and become accustomed to press <F12>, so the
+"toggle key is <F2> now.
 
 "End of Pathogen sauced plugins config
 
@@ -29,7 +39,7 @@ filetype indent on
 syntax on
 
 "Might turn these on when I get more confortable with __NO_MOUSE__
-"set hidden
+set hidden
 "set mouse=a
 
 set nocompatible
