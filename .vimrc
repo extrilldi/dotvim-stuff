@@ -14,14 +14,19 @@ autocmd vimenter * if !argc() | NERDTree | endif
 "NERDTree toggle, because sometimes I end up closing things
 nnoremap <F4> :NERDTreeToggle<CR>
 
+"Toggle-NERDTree-width
+"Not exactly part of NERDTree, so...
+"No configuration options atm
+
 "Powerline
 "Fancy Characters. Because more bling is needed. Always.
 let g:Powerline_symbols = 'fancy'
 
 "MiniBufExpl
-"Well, this thing has no configs for now.
 "It just sauces from a forked repo, instead of official one
 "Because a little patch.
+"HAHA, config (test)
+let g:miniBufExplModSelTarget=1
 
 "Vim-togglemouse
 "This little script toggles the mouse functionality, so it is handy why trying
@@ -32,6 +37,21 @@ let g:Powerline_symbols = 'fancy'
 
 "bufkill.vim
 "No config either.
+
+"Fugitive.vim
+"Well, it sure works nice. And adds a cute branch in Powerline.
+
+"Rails.vim
+"Well, let's see how it goes. No config here
+
+"Syntastic.vim
+"SUGAR. Well, I hope I don't see its error warnings all that often.
+
+"endwise.vim
+"No mods now.
+
+"delimitMate.vim
+"wondering...might change it to auto-pairs
 
 "End of Pathogen sauced plugins config
 
@@ -101,18 +121,20 @@ if has('gui_running')
     colorscheme adele
 endif
 
-
+"Testing out delimitMate and auto pairs
+"
+"
 "Auto complete for {}, () and []
 "Might change it, because it triggers at new line (enter).
-inoremap {<cr> {<cr>}<c-o>O<tab>
-inoremap [<cr> [<cr>]<c-o>O<tab>
-inoremap (<cr> (<cr>)<c-o>O<tab>
+"inoremap {<cr> {<cr>}<c-o>O<tab>
+"inoremap [<cr> [<cr>]<c-o>O<tab>
+"inoremap (<cr> (<cr>)<c-o>O<tab>
 
 "More autocomplete stuff, mostly inline brackets.
-inoremap ( ()<Left>
-inoremap [ []<Left>
-inoremap { {}<Left>
-inoremap < <><Left>
+"inoremap ( ()<Left>
+"inoremap [ []<Left>
+"inoremap { {}<Left>
+"inoremap < <><Left>
 
 set diffexpr=MyDiff()
 function MyDiff()
