@@ -69,6 +69,9 @@ set ruler
 set number
 set wildmenu
 set wildmode=list:longest,full
+set wildignore=*.swp,*.pyc
+set pastetoggle=<F3>
+
 "set stl=%f\ %m\ %r\ Line:\ %l/%L[%p%%]\ Col:\ %c\ Buf:\ #%n\ [%b][0x%B]
 "This will be omitted by Powerline, but no point on erasing it
 set statusline=%t%h%m%r%=[%b\ 0x%02B]\ \ \ %l,%c%V\ %P
