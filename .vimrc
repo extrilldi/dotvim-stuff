@@ -8,11 +8,11 @@ call pathogen#infect('~/src/vim/bundle')
 "
 "NERDTree
 "Auto load NERDTree
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
 "Auto load NERDTree when no file specified.
-autocmd vimenter * if !argc() | NERDTree | endif
+"autocmd vimenter * if !argc() | NERDTree | endif
 "NERDTree toggle, because sometimes I end up closing things
-nnoremap <F4> :NERDTreeToggle<CR>
+nnoremap <F6> :NERDTreeToggle<CR>
 
 "Toggle-NERDTree-width
 "Not exactly part of NERDTree, so...
