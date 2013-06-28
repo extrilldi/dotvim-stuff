@@ -2,7 +2,7 @@
 
 "Pathogen by tpope on github.
 "Pretty cool.
-call pathogen#infect('~/src/vim/bundle')
+execute pathogen#infect('~/src/vim/bundle/{}')
 
 "Pathogen sauced plugins and cofigs.
 "
