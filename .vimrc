@@ -53,6 +53,23 @@ let g:miniBufExplModSelTarget=1
 "delimitMate.vim
 "wondering...might change it to auto-pairs
 
+"jedi-vim.vim
+"Cool autocompletion for python
+"No configuration atm
+
+"vim-ruby
+"Bunch of scripts, that I get no idea how to use.
+"Except for the stuff after the filetype shit
+
+"supertab
+"It completes with <TAB>
+
+"command-t
+"Because actual <C-t> is mapped to something else
+"atm, let's use another F key.
+nnoremap <F10> :CommandT<CR>
+
+
 "End of Pathogen sauced plugins config
 
 
@@ -60,6 +77,12 @@ let g:miniBufExplModSelTarget=1
 filetype on
 filetype plugin on
 filetype indent on
+
+" Set up omnicompletion
+autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 
 syntax on
 
@@ -113,16 +136,14 @@ match OverLength /\%>80v.\+/
 "Set 256 colors mode. Well, only in vim.
 set t_Co=256
 
-if has('gui_running')
-"Envy Code R is an awesome font made by Damien Guard
-"Can be found in his blog damieng.com
-    set guifont=Terminus\ 11
+if has('gui_running') 
+    set guifont=PT\ Mono\ 11
 "Adele is just a slightly modified Monokai theme
     colorscheme adele
 endif
 
 "Testing out delimitMate and auto pairs
-"
+"So, no need for these ones.
 "
 "Auto complete for {}, () and []
 "Might change it, because it triggers at new line (enter).
